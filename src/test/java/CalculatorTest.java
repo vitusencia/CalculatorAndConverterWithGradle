@@ -8,41 +8,37 @@ class CalculatorTest {
 
     private Calculator calculator;
 
-    @Before
-    public void setUp() {
-        calculator = new Calculator();
-    }
+//    @Before
+//    public void setUp() {
+//        calculator = new Calculator();
+//    }
 
     @Test
     void adding() {
-        double expected = 30;
-        double result = Calculator.adding(20, 10);
-        assertEquals(expected, result);
+        Calculator calculator = new Calculator();
+        assertEquals(30, calculator.adding(20, 10), 0.001);
     }
 
     @Test
     void subtracting() {
-        double expected = 10;
-        double result = Calculator.subtracting(20, 10);
-        assertEquals(expected, result);
+        Calculator calculator = new Calculator();
+        assertEquals(10, calculator.subtracting(20, 10), 0.001);
     }
 
     @Test
     void multiplying() {
-        double expected = 200;
-        double result = Calculator.multiplying(20, 10);
-        assertEquals(expected, result);
+        Calculator calculator = new Calculator();
+        assertEquals(200, calculator.multiplying(20, 10), 0.001);
     }
 
     @Test
     void dividing() {
-        double expected = 2;
-        double result = Calculator.dividing(20, 10);
-        assertEquals(expected, result, 0.001);
+        Calculator calculator = new Calculator();
+        assertEquals(2, calculator.dividing(20, 10), 0.001);
     }
 
     @Test
-    public void whenInputIncorrectValueThenThrowException() {
+    void whenInputIncorrectValueThenThrowException() {
         boolean wasException = false;
         try {
             calculator.add("err", "");
